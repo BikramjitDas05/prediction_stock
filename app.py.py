@@ -9,9 +9,9 @@ start = '2000-01-01'
 end = '2019-12-31'
 
 st.title("Stock Price Prediction")
-user_input = st.text_input("Enter Stock Ticker", 'AAPL')
+user_input = st.text_input("Enter Stock Ticker")
 
-df = yf.download('AAPL', start=start, end=end)
+df = yf.download(user_input, start=start, end=end)
 print(df.head())
 
 #Describing Data
